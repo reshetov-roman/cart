@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Личный кабинет (Карта бонусного клуба)</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="sass/main.css">	
+</head>
+<body>
+	
+	
+	<div class="site-wrap">
+		<div class="page-card">
+			<div class="container">
+				<h1 class="page-card-title">
+					<span>Карта бонусного клуба</span>
+					<dfn class="hint-right" data-hint="Карта бонусного клуба">
+						<img src="img/icon_if.png">
+					</dfn>
+				</h1>
+				<div class="page-card-wrapper">
+					<div class="page-card-wrapper__card">
+						<div class="page-card-wrapper__card--button">
+							<span class="page-card-wrapper__card--text">Добавить карту бонусного клуба</span>
+						</div>
+					</div>
+					<div class="page-card-wrapper__card--wrp">
+						<form class="page-card-wrapper__card--form">
+							<strong class="page-card-wrapper__card--wrp--subtitle">Добавить карту бонусного клуба</strong>
+							<div class="page-card-wrapper__card--form--control">
+								<input type="text" class="page-card-wrapper__card--form--phone"maxlength="17" minlength="17" data-phone-pattern required>
+								<label class="page-card-wrapper__card--form--holder">Телефон, на который оформлена карта</label>
+							</div>
+							<div class="page-card-wrapper__card--form--buttons">
+								<button type="button" class="page-card-wrapper__card--form--cancel">Отменить</button>
+								<button disabled type="button" class="page-card-wrapper__card--form--code">Получить код</button>
+							</div>
+						</form>
+						<form class="page-card-wrapper__card--sms">
+							<strong class="page-card-wrapper__card--wrp--subtitle">Добавить карту бонусного клуба</strong>
+							<div class="page-card-wrapper__card--sms--control">
+								<input type="text" class="page-card-wrapper__card--sms--code" maxlength="4" minlength="4" required>
+								<label class="page-card-wrapper__card--sms--holder">Введите код из SMS</label>
+							</div>
+							<button type="button" class="page-card-wrapper__card--sms--resend">Отправить повторно код можно через <span id="timer"></span> сек</button>
+							<div class="page-card-wrapper__card--sms--buttons">
+								<button type="button" class="page-card-wrapper__card--sms--cancel">Отменить</button>
+								<button disabled type="button" class="page-card-wrapper__card--sms--confirm">Подтвердить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+
+	
+
+</body>
+</html>

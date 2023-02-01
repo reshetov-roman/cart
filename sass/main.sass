@@ -1,0 +1,319 @@
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+*:before, *:after
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-weight: 400
+	overflow-x: hidden
+	margin: 0
+	height: 100vh
+	font-family: 'Roboto Serif', serif
+	
+p
+	margin: 0
+
+a
+	text-decoration: none
+	outline: none
+	display: inline-block
+	color: #000
+
+img
+	max-width: 100%
+	height: auto
+	vertical-align: bottom
+
+ul li,
+ol li
+	list-style: none
+	display: block
+	margin: 0
+
+span
+	display: inline-block
+
+ul, ol
+	display: block
+	margin: 0
+	padding-left: 0
+
+button
+	outline: none
+	border: 0
+	padding: 0
+	cursor: pointer
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	font-weight: normal
+
+strong
+	display: inline-block
+
+.site-wrap
+	overflow: hidden
+.container
+	margin: 0 auto
+	position: relative
+	padding: 0 15px
+	max-width: 1030px
+	width: 100%
+
+//ColorVariables
+$colorBg1: #FAFAFA
+$colorBg2: #fff
+$colorButton: #EFEFF0
+$colorError: #FF392E
+$colorFrame: #EBEBF0
+$colorSite: #0100D3
+$colorTxt: #C5C5C7
+$colorBlue: #2F80ED
+$colorDark: #7B828A
+$colorGreen: #30DB5B
+$colorBlack: #262626
+$colorOrange: #F15A2C
+
+
+
+.page-card
+	margin-top: 40px
+	padding-left: 40px
+	&-title
+		position: relative
+		display: inline-block
+		font-size: 24px
+		font-weight: 500
+		padding-right: 22px
+		dfn
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 100%
+			text-align: center
+			font-size: 16px
+			width: 25px
+			height: 25px
+	&-wrapper
+		margin-top: 25px
+		&__card
+			max-width: 395px
+			width: 100%
+			&.not-active
+				display: none
+				animation: frameOpacity .3s linear
+			&--button
+				position: relative
+				font-size: 12px
+				color: $colorBlack
+				border: 1px solid $colorFrame
+				border-radius: 10px
+				padding: 12px 20px
+				cursor: pointer
+				transition: border-color .3s
+				&::after
+					content: url('../img/plus.png')
+					position: absolute
+					right: 20px
+					top: 12px
+				&:hover
+					transition: border-color .3s
+					border-color: $colorGreen
+			&--text
+				pointer-events: none
+			&--wrp
+				max-width: 500px
+				width: 100%
+				&--subtitle
+					font-size: 16px
+					margin: 18px 0
+			&--form
+				display: none
+				animation: frameOpacity .3s linear
+				&.block
+					display: block
+				&--control
+					position: relative
+					max-width: 500px
+					width: 100%
+					margin-bottom: 40px
+				&--phone
+					outline: none
+					width: 100%
+					padding: 20px
+					border-radius: 10px
+					font-size: 16px
+					color: $colorBlack
+					border: 1px solid $colorFrame
+					&:focus + label,
+					&:valid + label
+						font-size: 12px 
+						color: #BFBFBF
+						top: 16px 
+						left: 10px 
+						background: $colorBg2 
+						padding-left: 10px
+					&:focus,
+					&:valid
+						padding: 30px 20px 10px 20px
+				&--holder
+					transition: .3s
+					position: absolute
+					left: 20px
+					top: 50%
+					transform: translateY(-50%)
+					color: #BFBFBF
+					font-size: 16px
+					pointer-events: none
+				&--buttons
+					display: flex
+					justify-content: flex-end
+				&--cancel,
+				&--code
+					outline: none
+					border: 1px solid $colorFrame
+					border-radius: 10px
+					padding: 12px 40px
+					font-size: 16px
+					background-color: transparent
+				&--code
+					margin-left: 20px
+					background-color: $colorButton
+					&.active
+						color: $colorBg2
+						background-color: $colorSite
+			&--sms
+				display: none
+				animation: frameOpacity .3s linear
+				&.block
+					display: block
+				&--control
+					position: relative
+					max-width: 500px
+					width: 100%
+					margin-bottom: 18px
+				&--code
+					outline: none
+					width: 100%
+					padding: 20px
+					border-radius: 10px
+					font-size: 16px
+					color: $colorBlack
+					border: 1px solid $colorFrame
+					&:focus + label,
+					&:valid + label
+						font-size: 12px 
+						color: #BFBFBF
+						top: 16px 
+						left: 10px 
+						background: $colorBg2 
+						padding-left: 10px
+					&:focus,
+					&:valid
+						padding: 30px 20px 10px 20px
+				&--holder
+					transition: .3s
+					position: absolute
+					left: 20px
+					top: 50%
+					transform: translateY(-50%)
+					color: #BFBFBF
+					font-size: 16px
+					pointer-events: none
+				&--resend
+					outline: none
+					background: transparent
+					font-size: 14px
+					color: $colorFrame
+					margin-bottom: 25px
+					text-decoration: underline
+					&.active
+						color: $colorSite
+				&--buttons
+					display: flex
+					justify-content: flex-end
+				&--cancel,
+				&--confirm
+					outline: none
+					border: 1px solid $colorFrame
+					border-radius: 10px
+					padding: 12px 40px
+					font-size: 16px
+					background-color: transparent
+				&--confirm
+					margin-left: 20px
+					background-color: $colorButton
+					&.active
+						color: $colorBg2
+						background-color: $colorSite
+
+
+			
+		
+
+
+[data-hint] 
+	position: relative 
+	cursor: help
+[data-hint]::after 
+	opacity: 0 
+	z-index: -1
+	width: max-content 
+	color: $colorBg2
+	background-color: rgba(0,0,0,.7) 
+	border-radius: 6px 
+	padding: 10px 
+	content: attr(data-hint) 
+	font-size: 12px 
+	font-weight: 400 
+	line-height: 1em 
+	position: absolute 
+	top: -5px 
+	left: 50% 
+	transform: translate(-50%, -100%) 
+	pointer-events: none 
+	z-index: 22
+	transition: opacity 0.2s 
+[data-hint]:hover 
+	&::after 
+		opacity: 1 
+
+.hint-right 
+	&::after 
+		top: 50% 
+		left: auto 
+		right: -5px 
+		transform: translate(100%, -50%)
+
+
+@keyframes frameOpacity
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+		
+
